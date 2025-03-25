@@ -9,7 +9,7 @@ description: |
 platforms: # the platforms this rock should be built on and run on
     amd64:
 
-run-user: __daemon__
+run-user: _daemon_
 
 parts:
     busybox:
@@ -17,3 +17,8 @@ parts:
         stage-packages:
           - base-files_chisel
           - busybox_bins
+        override-prime: |
+            craftctl default
+            for cmd in $(${CRAFT_PART_INSTALL}/usr/bin/busybox --list); do
+                ln -s /usr/bin/busybox ${CRAFT_PRIME}/usr/bin/$cmd
+            done
