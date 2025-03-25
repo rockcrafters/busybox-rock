@@ -1,0 +1,15 @@
+name: OCI Factory Workflows - Build BusyBox Rock
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    uses: canonical/oci-factory/.github/workflows/Build-Rock.yaml@main
+    with:
+      oci-archive-name: "busybox-rock"
+      rock-repo: rockcrafters/busybox-rock
+      rock-repo-commit: main
+      rockfile-directory: .
