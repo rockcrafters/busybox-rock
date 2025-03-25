@@ -30,6 +30,8 @@ jobs:
         with:
           name: busybox-rock
 
+      - run: ls * && ls busybox-rock
+
       - name: 'Publish busybox-rock'
         uses: docker/build-push-action@v4
         with:
