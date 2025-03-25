@@ -13,3 +13,4 @@ jobs:
       rock-repo: rockcrafters/busybox-rock
       rock-repo-commit: main
       rockfile-directory: .
+      arch-map: '{"amd64": ["ubuntu-latest"]}'

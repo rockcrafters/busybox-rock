@@ -9,6 +9,8 @@ description: |
 platforms: # the platforms this rock should be built on and run on
     amd64:
 
+run-user: __daemon__
+
 parts:
     busybox:
         plugin: nil
